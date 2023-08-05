@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Caprasimo&family=Libre+Baskerville:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%= date %></h1>
+    <ul class="list">
+        <li>BUY FOOD</li>
+        <li>BUY WATER</li>
+        <li>BUY MILK</li>
+        <% for( let i=0; i < list.length; i++){ %>
+            <li><%= list[i] %></li>
+        <% } %>
+        <form action="/" method="post">
+            <input type="text" name="itemname" autocomplete="off">
+            <button type="submit">ADD</button>
+        </form>
+    </ul>
+    </div>
+</body>
+</html>
